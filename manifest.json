@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Auto Clear Privacy Data",
+  "version": "1.0",
+  "description": "Automatically clears cache, cookies, passwords and browsing history after user-defined inactivity period",
+  "permissions": [
+    "tabs",
+    "idle",
+    "browsingData",
+    "storage",
+    "notifications"
+  ],
+  "browser_action": {
+    "default_icon": "icon.jpg",
+    "default_popup": "popup.html",
+    "default_title": "Auto Clear Privacy Data"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "48": "icon.jpg",
+    "96": "icon.jpg"
+  }
+}
