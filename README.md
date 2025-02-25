@@ -96,9 +96,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - [Firefox Add-on Developer Hub](https://addons.mozilla.org/en-US/developers/)
 - [Mozilla Extension Workshop](https://extensionworkshop.com/)
-
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
-
-Project Link: [https://github.com/yourusername/firefox-auto-clear](https://github.com/yourusername/firefox-auto-clear)
