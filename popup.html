@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .toggle-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .slider-container {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .slider-info {
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background-color: #0060df;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003eaa;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #0060df;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Auto Clear Privacy Data</h2>
+    
+    <div class="toggle-container">
+      <span>Enable automatic clearing</span>
+      <label class="toggle">
+        <input type="checkbox" id="enabled">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="slider-container">
+      <div class="slider-info">
+        <span>Inactivity timeout:</span>
+        <span id="timeout-value">15 minutes</span>
+      </div>
+      <input type="range" id="timeout" min="1" max="120" value="15">
+    </div>
+    
+    <div>
+      <p>The extension will automatically clear your:</p>
+      <ul>
+        <li>Browsing history</li>
+        <li>Cookies</li>
+        <li>Cache</li>
+        <li>Saved passwords</li>
+        <li>Form data</li>
+      </ul>
+    </div>
+    
+    <button id="save">Save Settings</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
